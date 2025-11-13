@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Modern Flex Property Example</title>
+  <style>
+    body {
+      background: linear-gradient(120deg, #f6d365 0%, #fda085 100%);
+      font-family: 'Segoe UI', Arial, sans-serif;
+      margin: 0;
+      min-height: 100vh;
+    }
+    .flex-container {
+      display: flex;
+      flex-direction: row;
+      justify-content: space-evenly;
+      align-items: stretch;
+      gap: 32px;
+      padding: 60px 0;
+      max-width: 1000px;
+      margin: 60px auto;
+      background: rgba(255,255,255,0.7);
+      border-radius: 18px;
+      box-shadow: 0 8px 32px rgba(0,0,0,0.13);
+    }
+    .flex-child {
+      flex: 1 1 220px;
+      margin: 0;
+      background: linear-gradient(135deg, #fcd5ce 60%, #fff7f0 100%);
+      border-radius: 14px;
+      text-align: center;
+      font-size: 1.4rem;
+      padding: 50px 20px;
+      box-shadow: 0 2px 12px rgba(0,0,0,0.07);
+      transition: 
+        background 0.3s,
+        transform 0.2s,
+        box-shadow 0.2s;
+      color: #333;
+      position: relative;
+      overflow: hidden;
+    }
+    .flex-child::before {
+      content: "";
+      position: absolute;
+      top: -40px; left: -40px;
+      width: 80px; height: 80px;
+      background: rgba(252,213,206,0.25);
+      border-radius: 50%;
+      z-index: 0;
+    }
+    .flex-child:nth-child(2) {
+      background: linear-gradient(135deg, #8ecae6 60%, #e0fbfc 100%);
+      color: #234;
+    }
+    .flex-child:nth-child(3) {
+      background: linear-gradient(135deg, #b4f8c8 60%, #f1faee 100%);
+      color: #234;
+    }
+    .flex-child:hover {
+      background: linear-gradient(135deg, #ffe082 60%, #fffde4 100%);
+      transform: translateY(-10px) scale(1.04);
+      box-shadow: 0 12px 32px rgba(0,0,0,0.18);
+      color: #d35400;
+    }
+    @media (max-width: 900px) {
+      .flex-container {
+        flex-direction: column;
+        gap: 24px;
+        padding: 40px 0;
+      }
+      .flex-child {
+        padding: 40px 10px;
+        font-size: 1.1rem;
+      }
+    }
+  </style>
+</head>
+<body>
+  <div class="flex-container">
+    <div class="flex-child">Flex Child 1<br><span style="font-size:0.9em;color:#888;"></span></div>
+    <div class="flex-child">Flex Child 2<br><span style="font-size:0.9em;color:#888;"></span></div>
+    <div class="flex-child">Flex Child 3<br><span style="font-size:0.9em;color:#888;"></span></div>
+        <div class="flex-child">Flex Child 4<br><span style="font-size:0.9em;color:#888;"></span></div>
+
+  </div>
+</body>
+</html>

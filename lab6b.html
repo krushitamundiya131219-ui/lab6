@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Photo Gallery Flex</title>
+  <style>
+    body {
+      background: #f3f4f6;
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+    }
+    .gallery-container {
+      max-width: 1100px;
+      margin: 40px auto;
+      padding: 20px;
+      background: #fff;
+      border-radius: 12px;
+      box-shadow: 0 4px 24px rgba(0,0,0,0.08);
+    }
+    .gallery-title {
+      text-align: center;
+      font-size: 2rem;
+      color: #374151;
+      margin-bottom: 30px;
+      font-weight: bold;
+    }
+    .gallery-flex {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 24px;
+      justify-content: center;
+    }
+    .gallery-item {
+      flex: 1 1 220px;
+      max-width: 240px;
+      background: #fcd5ce;
+      border-radius: 10px;
+      overflow: hidden;
+      box-shadow: 0 2px 12px rgba(0,0,0,0.07);
+      transition: transform 0.2s;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+    .gallery-item img {
+      width: 100%;
+      height: 180px;
+      object-fit: cover;
+      display: block;
+      border-bottom: 2px solid #fff;
+    }
+    .caption {
+      padding: 12px;
+      text-align: center;
+      color: #333;
+      font-size: 1rem;
+      background: #fff7f0;
+      width: 100%;
+    }
+    .gallery-item:hover {
+      transform: scale(1.05) translateY(-6px);
+      box-shadow: 0 8px 24px rgba(0,0,0,0.13);
+    }
+    @media (max-width: 800px) {
+      .gallery-flex {
+        gap: 14px;
+      }
+      .gallery-item {
+        max-width: 48%;
+      }
+    }
+    @media (max-width: 500px) {
+      .gallery-item {
+        max-width: 100%;
+      }
+    }
+  </style>
+</head>
+<body>
+  <div class="gallery-container">
+    <div class="gallery-title">Photo Gallery</div>
+    <div class="gallery-flex">
+      <div class="gallery-item">
+        <img src="https://images.unsplash.com/photo-1506744038136-46273834b3fb?auto=format&fit=crop&w=400&q=80" alt="Nature 1">
+        <div class="caption">Mountain Lake</div>
+      </div>
+      <div class="gallery-item">
+        <img src="https://images.unsplash.com/photo-1465101046530-73398c7f28ca?auto=format&fit=crop&w=400&q=80" alt="Nature 2">
+        <div class="caption">Forest Path</div>
+      </div>
+      <div class="gallery-item">
+        <img src="https://images.unsplash.com/photo-1500534314209-a25ddb2bd429?auto=format&fit=crop&w=400&q=80" alt="Nature 3">
+        <div class="caption">Desert Dunes</div>
+      </div>
+      <div class="gallery-item">
+        <img src="https://tse2.mm.bing.net/th/id/OIP.-GWNuZA7wUMpyxVGsf8rnQHaE8?pid=Api&P=0&h=180" alt="Nature 4">
+        <div class="caption">cat</div>
+      </div>
+      <div class="gallery-item">
+        <img src="https://images.unsplash.com/photo-1519125323398-675f0ddb6308?auto=format&fit=crop&w=400&q=80" alt="Nature 5">
+        <div class="caption">Snowy Peaks</div>
+      </div>
+      <div class="gallery-item">
+        <img src="https://images.unsplash.com/photo-1465101046530-73398c7f28ca?auto=format&fit=crop&w=400&q=80" alt="Nature 6">
+        <div class="caption">Green Valley</div>
+      </div>
+      <div class="gallery-item">
+        <img src="https://tse1.mm.bing.net/th/id/OIP.K452PKyJLzYAqcOejAgHmAHaGB?pid=Api&P=0&h=180" alt="Nature 7">
+        <div class="caption">cat babies</div>
+      </div>
+      <div class="gallery-item">
+        <img src="https://images.unsplash.com/photo-1506744038136-46273834b3fb?auto=format&fit=crop&w=400&q=80" alt="Nature 8">
+        <div class="caption">Crystal Lake</div>
+      </div>
+      <div class="gallery-item">
+        <img src="https://images.unsplash.com/photo-1519125323398-675f0ddb6308?auto=format&fit=crop&w=400&q=80" alt="Nature 9">
+        <div class="caption">Winter Forest</div>
+      </div>
+      <div class="gallery-item">
+        <img src="https://images.unsplash.com/photo-1500534314209-a25ddb2bd429?auto=format&fit=crop&w=400&q=80" alt="Nature 10">
+        <div class="caption">Desert Road</div>
+      </div>
+      <div class="gallery-item">
+        <img src="https://tse4.mm.bing.net/th/id/OIP.nxq-dsPSdCiBdy40_SdmbQHaHa?pid=Api&P=0&h=180" alt="Nature 11">
+        <div class="caption">teadybear</div>
+      </div>
+      <div class="gallery-item">
+        <img src="https://images.unsplash.com/photo-1465101046530-73398c7f28ca?auto=format&fit=crop&w=400&q=80" alt="Nature 12">
+        <div class="caption">River Bend</div>
+      </div>
+    </div>
+  </div>
+</body>
+</html>
